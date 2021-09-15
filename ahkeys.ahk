@@ -21,13 +21,13 @@ hotkeys := initHotkeys()
 
 ; See also: https://kbdlayout.info/kbdgr/scancodes
 ; ahklint-ignore-begin:W004,I001
-<^>!SC01E::Send Ã¤
-<^>!+SC01E::Send Ã„
-<^>!SC016::Send Ã¼
-<^>!+SC016::Send Ãœ
-<^>!SC018::Send Ã¶
-<^>!+SC018::Send Ã–
-<^>!SC01F::Send ÃŸ
+<^>!SC01E::Send ä
+<^>!+SC01E::Send Ä
+<^>!SC016::Send ü
+<^>!+SC016::Send Ü
+<^>!SC018::Send ö
+<^>!+SC018::Send Ö
+<^>!SC01F::Send ß
 +SC00B::Send *
 SC00C::Send -
 +SC00C::Send _
