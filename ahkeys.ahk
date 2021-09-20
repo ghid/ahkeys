@@ -21,6 +21,16 @@ hotkeys := initHotkeys()
 
 ; See also: https://kbdlayout.info/kbdgr/scancodes
 ; ahklint-ignore-begin:W004,I001
+#if GetKeyState("AppsKey", "P")
+SC01E::Send ä
+Shift & SC01E::Send Ä
+SC016::Send ü
+Shift & SC016::Send Ü
+SC018::Send ö
+Shift & SC018::Send Ö
+SC01F::Send ß
+#if
+
 <^>!SC01E::Send ä
 <^>!+SC01E::Send Ä
 <^>!SC016::Send ü
@@ -52,7 +62,7 @@ SC035::Send /
 
 *CapsLock::
     OutputDebug % Format("CapsLock: {:s} Hotkey: {:s} Prior Hotkey: {:s}"
-            , GetKeyState("CapsLock", "T"), A_ThisHotkey, A_PriorHotkey)
+                , GetKeyState("CapsLock", "T"), A_ThisHotkey, A_PriorHotkey)
 	if (A_ThisHotkey == A_PriorHotkey
 			&& A_TimeSincePriorHotkey < 300
 			&& A_TimeSincePriorHotkey > 100
