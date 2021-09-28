@@ -38,6 +38,10 @@ SC01F::Send ß
 <^>!SC018::Send ö
 <^>!+SC018::Send Ö
 <^>!SC01F::Send ß
++SC003::Send @
++SC008::Sendraw ^
+SC029::Send % "´"
++SC029::Send % "``"
 +SC00B::Send *
 SC00C::Send -
 +SC00C::Send _
