@@ -22,27 +22,27 @@ hotkeys := initHotkeys()
 ; See also: https://kbdlayout.info/kbdgr/scancodes
 ; ahklint-ignore-begin:W004,I001
 #if GetKeyState("AppsKey", "P")
-SC01E::Send ä
-Shift & SC01E::Send Ä
-SC016::Send ü
-Shift & SC016::Send Ü
-SC018::Send ö
-Shift & SC018::Send Ö
-SC01F::Send ß
+SC01E::Send Ã¤
+Shift & SC01E::Send Ã„
+SC016::Send Ã¼
+Shift & SC016::Send Ãœ
+SC018::Send Ã¶
+Shift & SC018::Send Ã–
+SC01F::Send ÃŸ
 #if
 
-AppsKey::
+AppsKey::return
 
-<^>!SC01E::Send ä
-<^>!+SC01E::Send Ä
-<^>!SC016::Send ü
-<^>!+SC016::Send Ü
-<^>!SC018::Send ö
-<^>!+SC018::Send Ö
-<^>!SC01F::Send ß
+<^>!SC01E::Send Ã¤
+<^>!+SC01E::Send Ã„
+<^>!SC016::Send Ã¼
+<^>!+SC016::Send Ãœ
+<^>!SC018::Send Ã¶
+<^>!+SC018::Send Ã–
+<^>!SC01F::Send ÃŸ
 +SC003::Send @
 +SC008::Sendraw ^
-SC029::Send % "´"
+SC029::Send % "Â´"
 +SC029::Send % "``"
 +SC00B::Send *
 SC00C::Send -
