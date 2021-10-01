@@ -31,6 +31,8 @@ Shift & SC018::Send Ö
 SC01F::Send ß
 #if
 
+AppsKey::
+
 <^>!SC01E::Send ä
 <^>!+SC01E::Send Ä
 <^>!SC016::Send ü
