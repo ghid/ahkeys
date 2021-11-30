@@ -1,4 +1,4 @@
-#Persistent
+﻿#Persistent
 #SingleInstance Force
 ListLines Off
 SetBatchLines -1
