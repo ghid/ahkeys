@@ -40,10 +40,11 @@ AppsKey::return
 <^>!SC018::Send ö
 <^>!+SC018::Send Ö
 <^>!SC01F::Send ß
+<^>!SC0B::Send °
 +SC003::Send @
-+SC008::Sendraw ^
-SC029::Send % "´"
-+SC029::Send % "``"
++SC008::Sendraw % "^"
+SC029::Sendraw % "´"
++SC029::Sendraw % "```"    
 +SC00B::Send *
 SC00C::Send -
 +SC00C::Send _
@@ -70,13 +71,15 @@ SC035::Send /
     OutputDebug % Format("CapsLock: {:s} Hotkey: {:s} Prior Hotkey: {:s}"
                 , GetKeyState("CapsLock", "T"), A_ThisHotkey, A_PriorHotkey)
 	if (A_ThisHotkey == A_PriorHotkey
-			&& A_TimeSincePriorHotkey < 300
+			&& A_TimeSincePriorHotkey < 180
 			&& A_TimeSincePriorHotkey > 100
 			&& A_TimeSincePriorHotkey != 250) {
 		if GetKeyState("CapsLock", "T") {
 			SetCapsLockState Off
+            TrayTip
 		} else {
 			SetCapsLockState On
+            TrayTip,, Caps On %A_TimeSincePriorHotkey%, 1, 33
 		}
 	}
 Return
@@ -127,7 +130,6 @@ defaultMappings() {
 useExitFunc() {
     OutputDebug %A_ThisFunc%
 	SetCapsLockState Off
-    ; showWindowsTerminal(A_DetectHiddenWindows)
 }
 
 send() {
